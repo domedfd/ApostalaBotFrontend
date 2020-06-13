@@ -9,7 +9,7 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 
 function QrCode() {
-  const [mac, setMac] = useState();
+  const [mac, setMac] = useState("123");
   const [redirect, setRedirect] = useState(false);
 
   async function SaveMac() {
@@ -33,7 +33,8 @@ function QrCode() {
         </S.QrCodeArea>
 
         <S.ValidationCode>
-          <span>Digite la numeracion que salio en tu celular.</span>
+          <span>Digite 12345.</span>
+          {/* <span>Digite la numeracion que salio en tu celular.</span> */}
           <input
             type="text"
             onChange={(e) => setMac(e.target.value)}
