@@ -27,6 +27,9 @@ function Home() {
   }
 
   useEffect(() => {
+    console.log("------------------------");
+    console.log(process.env.URLAPI)
+    console.log("------------------------");
     loadTasks();
     if (!isConnected) setRedirect(true);
   }, [filterActived]);
